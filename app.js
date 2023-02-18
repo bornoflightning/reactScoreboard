@@ -1,3 +1,24 @@
+let players = [
+    {
+        name:"Player 1",
+        score: 25
+    },
+    {
+        name:"Player 2",
+        score: 25
+    },
+    {
+        name:"Player 3",
+        score: 25
+    },
+    {
+        name:"Player 4",
+        score: 25
+    }
+
+]
+
+
 function Header(props) {
     return (
         <header>
@@ -7,42 +28,57 @@ function Header(props) {
     );
 }
 
-function Player() {
+function Player(prop) {
     return (
         <div className= "player">
-            <div className= "player-name"> Victor</div>
+            <div className= "player-name"> { prop.name }</div>
            
-            <Counter />
+            <Counter score={ prop.score }/>
         </div>
     )
 }
 
-function Counter() {
+function Counter(props) {
 
     return (
     <div className= "counter">
         <button className= "counter-action decrement">-</button>
-        <span className= "counter-score">35</span>
+        <span className= "counter-score">{ props.score }</span>
         <button className= "counter-action increment">+</button>
     </div>
     )
 }
 
+function Footer(props) {
+    return (
+        <footer className="footer">
 
-function App() {
+        </footer>
+    );
+}
+
+function App(props) {
     return(
         <div className= "scoreboard">
             <Header title="Scoreboard" totalPlayers= {1}/>
 
             {/* Player List */}
-            <Player />
+            {props.initialPlayers.map(
+                player => 
+                <Player 
+                    name= {player.name} 
+                    score={player.score}/>
+            )}
+            
+
+            <Footer />
         </div>
     )
 }
 
 ReactDOM.render(
     // <Header />,
-    <App />,
+    <App initialPlayers={ players }/>,
     document.getElementById("root")
 
 

@@ -12,7 +12,7 @@
 
 header {
     background: var(--blue-green);
-    padding: 1em;
+    padding: 0.5em;
     color:var(--dark-celeste);
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
@@ -20,13 +20,32 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-right: 2.5em;
+    padding-left: 1em;
+    
+    /* box-shadow: 10px 10px; */
+}
+footer {
+    background: var(--blue-green);
+    padding: 0.5em;
+    color:var(--dark-celeste);
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.5em;
     padding-right: 3em;
+    padding-left: 1em;
+    
     /* box-shadow: 10px 10px; */
 }
 
 
 .player {
-    border: solid 2px var(--blue-green);
+    border: solid 3px var(--blue-green);
+    border-top: none;
     background: var(--dark-celeste);
     padding: 0.75em;
     display: flex;
@@ -35,6 +54,7 @@ header {
     align-items: center;
     font-size: x-large;
     color: var(--paynes-gray);
+    
     
     
 }
