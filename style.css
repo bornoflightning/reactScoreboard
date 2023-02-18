@@ -1,0 +1,58 @@
+:root {
+    --blue-green : #2F97C1;
+    --turquoise: #15E6CD;
+    --paynes-gray: #587291;
+    --celeste: #B4F8F0;
+    --dark-celeste: #A5EEF3;
+    --spring-green: #0CF574;
+    --pakistan-green: #023B1C;
+    --aquamarine: #B0FCD2;
+}
+
+
+header {
+    background: var(--blue-green);
+    padding: 1em;
+    color:var(--dark-celeste);
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3em;
+    /* box-shadow: 10px 10px; */
+}
+
+
+.player {
+    border: solid 2px var(--blue-green);
+    background: var(--dark-celeste);
+    padding: 0.75em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    color: var(--paynes-gray);
+    
+    
+}
+
+.counter {
+    /* border: solid 2px var(--blue-green); */
+    justify-items: right;
+    justify-content: right;
+    
+}
+
+.counter-action {
+    font-size: large;
+    width: 1.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    background-color: var(--blue-green);
+    border-radius: 5px;
+    height: 2em;
+    width: 2em;
+}
