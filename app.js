@@ -1,19 +1,23 @@
 let players = [
     {
         name:"Player 1",
-        score: 25
+        score: 25,
+        id: 1
     },
     {
         name:"Player 2",
-        score: 25
+        score: 25,
+        id: 2
     },
     {
         name:"Player 3",
-        score: 25
+        score: 25,
+        id: 3
     },
     {
         name:"Player 4",
-        score: 25
+        score: 25,
+        id: 4
     }
 
 ]
@@ -60,14 +64,16 @@ function Footer(props) {
 function App(props) {
     return(
         <div className= "scoreboard">
-            <Header title="Scoreboard" totalPlayers= {1}/>
+            <Header title="Scoreboard" totalPlayers= {props.initialPlayers.length}/>
 
             {/* Player List */}
             {props.initialPlayers.map(
                 player => 
                 <Player 
                     name= {player.name} 
-                    score={player.score}/>
+                    score={player.score}
+                    key={ player.id.toString()}
+                    />
             )}
             
 
